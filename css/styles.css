@@ -7,6 +7,7 @@
     --white: #fff;
     --background-brand-color: #2F303A;
     --background-btn-color: #F5F4FA;
+    --social-grey: #AFB1B8;
 }
 
 /* ============= Сброс стилей ============= */
@@ -50,6 +51,67 @@ img {
     padding-right: 15px;
 }
 
+.menu-link.current {
+    color: var(--logo-brand-color);
+}
+
+    /* ============= соцсети  =============*/
+    .section {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    
+    /* ============= социальные сети ============= */
+    .socials {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .social-item:not(:last-child) {
+        margin-right: 10px;
+    }
+    
+    .social-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 44px;
+        width: 44px;
+        border-radius: 50%;
+    
+        color: var(--social-grey);
+        background-color: var(--white);
+    }
+    
+    .social-link:hover,
+    .social-link:focus {
+        background-color: var(--logo-brand-color);
+        color: var(--white);
+        outline: 0;
+    }
+    
+    .social-link-icon {
+        fill: currentColor;
+    }
+    
+    footer .social-link {
+        color: var(--white);
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .visually-hidden {
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        margin: -1px;
+    }
+
 
 /* ============= Верхний ряд ============= */
 .head-border {
@@ -70,7 +132,6 @@ img {
 /* ============= стилизация logo ============= */
 .logo {
     display: block;
-
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -110,16 +171,18 @@ img {
 /* ============= Контакты в хедере ============= */
 .contacts {
     display: flex;
-    align-items: center;
     margin-left: auto;
+    align-items: center;
 }
-.contact-item + .contact-item { margin-left: 50px; }
+.contact-item+.contact-item { 
+    margin-left: 30px; 
+}
 
 .contact-link {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    
+    display: flex;
+    align-items: center;   
+    padding-top: 22px;
+    padding-bottom: 22px;   
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -134,27 +197,39 @@ img {
 .contact-link:focus {
     color: var(--logo-brand-color);
 }
-.menu-link-action:visited { color: var(--black); }
 
-
-.section { 
-    padding-top: 94px;
-    padding-bottom: 94px;
+.icon-top-contacts {
+    margin-right: 10px;
+    fill: currentColor;
 }
+
 
 /* ============= Секция героя ============= */
 .hero {
-    padding-top: 80px;
-    padding-bottom: 80px;
-
+    padding-top: 200px;
+    padding-bottom: 200px;
     text-align: center; /* наследуется для детей */
+    /*background-color: var(--background-brand-color);*/
+}
 
-    background-color: var(--background-brand-color);
+.overlay {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:
+        linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url("../images/background/hero-pic.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #C4C4C4;
 }
 
 .hero-title {
     margin-bottom: 30px;
-
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -167,7 +242,6 @@ img {
     padding: 10px 32px;
     border-radius: 4px;
     border: transparent;
-
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -185,25 +259,32 @@ img {
 
 
 /* ============= Особенности ============= */
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
-}
 
 .features { display: flex; }
 .features-item:not(:last-child) { margin-right: 30px; }
+.features-item {
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-features-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--background-btn-color);
+}
+
+.icon-features {
+    height: 70px;
+    width: 70px;
+}
 
 .features-title {
     margin-bottom: 10px;
-
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -225,7 +306,6 @@ img {
 
 .section-title {
     margin-bottom: 50px;
-
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -234,8 +314,7 @@ img {
 }
 
 .offers { display: flex; }
-
-.offer-item + .offer-item { margin-left: 30px; }
+.offer-item+.offer-item { margin-left: 30px; }
 
 
 /* ============= Наша команда ============= */
@@ -243,11 +322,19 @@ img {
     background-color: var(--background-btn-color);
 }
 
-.employee { display: flex; }
+.employee {
+    display: flex;
+}
 
-.employee-item { align-items: center; }
+.employee-item {
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
 
-.employee-item + .employee-item { margin-left: 30px; }
+.employee-item+.employee-item {
+    margin-left: 30px;
+}
 
 .employee-container {
     padding-top: 30px;
@@ -257,7 +344,6 @@ img {
 .employee-name {
     text-align: center;
     margin-bottom: 10px;
-
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
@@ -266,18 +352,59 @@ img {
 
 .employee-posiition {
     text-align: center;
+    margin-bottom: 16px;
 
     font-size: 16px;
     line-height: 1.18;
     color: var(--grey);
 }
 
+/* ============= Постоянные клиенты ============= */
+.customers {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon-customer:not(:last-child) {
+    margin-right: 30px;
+}
+
+.icon-customer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.customer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    color: #AFB1B8;
+}
+
+.customer-link:hover,
+.customer-link:focus {
+    color: var(--logo-brand-color);
+    border: 1px solid var(--logo-brand-color);
+    outline: 0;
+}
+
+.customer-link-icon {
+    fill: currentColor;
+    width: 106px;
+    height: 60px;
+}
 
 /* ============= footer ============= */
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
-
     background-color: var(--background-brand-color);
 }
 
@@ -308,6 +435,21 @@ footer .logo {
     color: var(--logo-brand-color);
 }
 
+.footer-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--white);
+
+}
+
+.footer-columns {
+    align-items: baseline;
+    display: flex;
+}
+
 
 
 /* ! Portfolio styles (main) */
@@ -322,7 +464,6 @@ footer .logo {
     background-color: var(--background-btn-color);
     border: transparent;
     border-radius: 4px;
-
     cursor: pointer;
 }
 
@@ -340,6 +481,8 @@ footer .logo {
 .filter-btn:hover {
     color: var(--white);
     background-color: var(--logo-brand-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    outline: 0;
 }
 
 
@@ -357,13 +500,21 @@ footer .logo {
     margin-bottom: 30px;
 }
 
+.card-item-link {
+    display: block;
+}
+
+.card-item-link:hover,
+.card-item-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 
 .card-item-container {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
-
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
@@ -379,7 +530,6 @@ footer .logo {
 
 .card-item-description {
     margin-bottom: 20px;
-
     font-size: 16px;
     line-height: 1.88;
     color: var(--grey);
