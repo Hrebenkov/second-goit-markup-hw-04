@@ -10,7 +10,7 @@
     --social-grey: #AFB1B8;
 }
 
-/* ============= Сброс стилей ============= */
+/* ============= Скидання стилів ============= */
 body {
     background-color: var(--white);
     font-family: "Roboto", sans-serif;
@@ -29,20 +29,21 @@ img {
     height: auto;
 }
 
-/* Сброс стилей  ul */
+/* Знімаю стилізацію з ul */
 .list-style {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-/* сброс стилей <a> */
+/* Знімаю стилізацію з <a> */
 .link-decor {
     text-decoration: none;
 }
+/* ============= /Скидання стилів ============= */
 
 
-/* ============= Компоненты ============= */
+/* ============= Компоненти ============= */
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -55,83 +56,85 @@ img {
     color: var(--logo-brand-color);
 }
 
-    /* ============= соцсети  =============*/
-    .section {
-        padding-top: 94px;
-        padding-bottom: 94px;
-    }
-    
-    /* ============= социальные сети ============= */
-    .socials {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .social-item:not(:last-child) {
-        margin-right: 10px;
-    }
-    
-    .social-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 44px;
-        width: 44px;
-        border-radius: 50%;
-    
-        color: var(--social-grey);
-        background-color: var(--white);
-    }
-    
-    .social-link:hover,
-    .social-link:focus {
-        background-color: var(--logo-brand-color);
-        color: var(--white);
-        outline: 0;
-    }
-    
-    .social-link-icon {
-        fill: currentColor;
-    }
-    
-    footer .social-link {
-        color: var(--white);
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-    
-    .visually-hidden {
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        border: 0;
-        padding: 0;
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        margin: -1px;
-    }
+/* соцмережі */
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/* соціальні мережі */
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.social-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+
+    color: var(--social-grey);
+    background-color: var(--white);
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--logo-brand-color);
+    color: var(--white);
+    outline: 0;
+}
+
+.social-link-icon {
+    fill: currentColor;
+}
+
+footer .social-link {
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+/* ============= /Компоненти ============= */
 
 
-/* ============= Верхний ряд ============= */
+/* ============= Верхній рядок ============= */
 .head-border {
     background-color: var(background-brand-color);
     border-bottom: 1px solid #ECECEC;
 }
 
 .head-nav {
-    display: flex;
+    display: flex;   /* для вирівнювання елементів у div */
 }
 
-/* ============= навигация ================ */
+/* навігація (лого+меню)*/
 .nav {
     display: flex;
     align-items: center;
 }
 
-/* ============= стилизация logo ============= */
+/* стилізація logo */
 .logo {
     display: block;
+
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -141,14 +144,13 @@ img {
 .logo-positive { color: var(--logo-positive-color); }
 .logo-negative { color: var(--logo-negative-color); }
 
-/*  ============= ховер лого ============= */
+/* ховер лого по всій площині у заголовку */
 .nav>.logo {
     padding-top: 24px;
     padding-bottom: 25px;
 }
-    
 
-/*  ============= Меню ============= */
+/* Меню */
 .menu {
     display: flex;
     margin-left: 93px;
@@ -168,29 +170,32 @@ img {
     color: var(--black);
 }
 
-/* ============= Контакты в хедере ============= */
+/* Контакти в хедері */
 .contacts {
     display: flex;
     margin-left: auto;
     align-items: center;
 }
-.contact-item+.contact-item { 
-    margin-left: 30px; 
+
+.contact-item+.contact-item {
+    margin-left: 30px;
 }
 
 .contact-link {
     display: flex;
-    align-items: center;   
+    align-items: center;
+
     padding-top: 22px;
-    padding-bottom: 22px;   
+    padding-bottom: 22px;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--grey);
+    /* color: inherit; */
 }
 
-/* ============= стилизация меню при действиях ============= */
 .menu-link:hover,
 .menu-link:focus,
 .contact-link:hover,
@@ -204,12 +209,18 @@ img {
 }
 
 
-/* ============= Секция героя ============= */
+
+
+/* ============= /Верхній рядок ============= */
+
+
+/* ============= Секція героя ============= */
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    text-align: center; /* наследуется для детей */
-    /*background-color: var(--background-brand-color);*/
+
+    text-align: center; /* наслідується до дітей */
+    /* background-color: var(--background-brand-color); */
 }
 
 .overlay {
@@ -217,19 +228,21 @@ img {
     height: 600px;
     margin-left: auto;
     margin-right: auto;
-    background-image:
+
+    background-image: 
         linear-gradient(
         rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)),
+        rgba(47, 48, 58, 0.4) ),
         url("../images/background/hero-pic.jpg");
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     background-position: center;
     background-size: cover;
     background-color: #C4C4C4;
-}
+} 
 
 .hero-title {
     margin-bottom: 30px;
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -242,6 +255,7 @@ img {
     padding: 10px 32px;
     border-radius: 4px;
     border: transparent;
+
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -256,16 +270,18 @@ img {
 .order-button:focus {
     background-color: #188CE8;
 }
+/* ============= /Секція героя ============= */
 
 
-/* ============= Особенности ============= */
-
+/* ============= Особливості ============= */
 .features { display: flex; }
+
 .features-item:not(:last-child) { margin-right: 30px; }
 .features-item {
     display: block;
     justify-content: center;
     align-items: center;
+
 }
 
 .icon-features-box {
@@ -275,6 +291,7 @@ img {
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
+    
     background-color: var(--background-btn-color);
 }
 
@@ -282,6 +299,10 @@ img {
     height: 70px;
     width: 70px;
 }
+
+
+
+
 
 .features-title {
     margin-bottom: 10px;
@@ -297,15 +318,17 @@ img {
     line-height: 1.71;
     color: var(--grey);
 }
+/* ============= /Особливості ============= */
 
 
-/* ============= Чем мы занимаемся ============= */
+/* ============= Чим ми займаємось ============= */
 .section-offers {
     padding-top: 0;
 }
 
 .section-title {
     margin-bottom: 50px;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -314,7 +337,9 @@ img {
 }
 
 .offers { display: flex; }
-.offer-item+.offer-item { margin-left: 30px; }
+
+.offer-item + .offer-item { margin-left: 30px; }
+/* ============= /Чим ми займаємось ============= */
 
 
 /* ============= Наша команда ============= */
@@ -322,19 +347,16 @@ img {
     background-color: var(--background-btn-color);
 }
 
-.employee {
-    display: flex;
-}
+.employee { display: flex; }
 
-.employee-item {
-    align-items: center;
+.employee-item { 
+    align-items: center; 
+
     background-color: var(--white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.employee-item+.employee-item {
-    margin-left: 30px;
-}
+.employee-item + .employee-item { margin-left: 30px; }
 
 .employee-container {
     padding-top: 30px;
@@ -344,6 +366,7 @@ img {
 .employee-name {
     text-align: center;
     margin-bottom: 10px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
@@ -359,12 +382,18 @@ img {
     color: var(--grey);
 }
 
-/* ============= Постоянные клиенты ============= */
+
+
+/* ============= /Наша команда ============= */
+
+
+/* ============= Постійні клієнти ============= */
 .customers {
     display: flex;
     justify-content: center;
     cursor: pointer;
 }
+
 
 .icon-customer:not(:last-child) {
     margin-right: 30px;
@@ -374,8 +403,10 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+
     cursor: pointer;
 }
+
 
 .customer-link {
     display: flex;
@@ -399,12 +430,19 @@ img {
     fill: currentColor;
     width: 106px;
     height: 60px;
+
 }
+
+
+/* ============= /Постійні клієнти ============= */
+
+
 
 /* ============= footer ============= */
 .footer {
     padding-top: 60px;
     padding-bottom: 60px;
+
     background-color: var(--background-brand-color);
 }
 
@@ -428,11 +466,16 @@ footer .logo {
     color: var(--white);
 }
 
+/* * «С5» Текст контактів в !хедері! і !футері! змінює колір при ховері і фокусі. */
 .footer-contact:hover,
 .footer-contact:focus,
 .footer-address:hover,
 .footer-address:focus {
     color: var(--logo-brand-color);
+}
+
+.footer-column-two {
+    margin-left: 70px;
 }
 
 .footer-title {
@@ -444,19 +487,24 @@ footer .logo {
     color: var(--white);
 
 }
-
 .footer-columns {
     align-items: baseline;
     display: flex;
 }
 
+/* ============= /footer ============= */
+
+
+
 
 
 /* ! Portfolio styles (main) */
 
-/* ============= фильтр-кнопки ============= */
+/* ============= фільр-кнопки ============= */
+/* todo Мають бути Радіо-кнопки */
 .filter-btn {
     padding: 6px 22px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -464,6 +512,7 @@ footer .logo {
     background-color: var(--background-btn-color);
     border: transparent;
     border-radius: 4px;
+
     cursor: pointer;
 }
 
@@ -484,13 +533,17 @@ footer .logo {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     outline: 0;
 }
+/* ============= /фільр-кнопки ============= */
 
 
-/* ============= Образци работ  ============= */
+/* ============= Зразки робіт (картки) ============= */
 .cards {
     display: flex;
     flex-wrap: wrap;
 }
+/* .card-item {
+    cursor: pointer;
+} */
 
 .card-item:not(:nth-child(3n)) {
     margin-right: 30px;
@@ -501,7 +554,8 @@ footer .logo {
 }
 
 .card-item-link {
-    display: block;
+    display: block; /* без цього не працює ховер */
+
 }
 
 .card-item-link:hover,
@@ -509,18 +563,21 @@ footer .logo {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-
+/* * «B17» У картках на сторінці Портфоліо є рамка (властивість border), але тільки у нижній частині картки. */
 .card-item-container {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
+
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
 }
 
 .card-item-title {
+    /* margin-bottom: 4px; - Григорій сказав прибрати, хоча в проєкті цей відступ є */
+
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -530,6 +587,7 @@ footer .logo {
 
 .card-item-description {
     margin-bottom: 20px;
+
     font-size: 16px;
     line-height: 1.88;
     color: var(--grey);
