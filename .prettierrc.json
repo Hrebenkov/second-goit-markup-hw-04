@@ -3,5 +3,11 @@
   "printWidth": 80,
   "tabWidth": 2,
   "useTabs": false,
-  "singleQuote": true
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "jsxbracketsameline": false,
+  "arrowParens": "avoid",
+  "proseWrap": "always"
 }
