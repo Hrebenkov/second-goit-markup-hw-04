@@ -1,6 +1,6 @@
 {
-	"editor.cursorBlinking": "phase",
-	"editor.cursorStyle": "block",
+	"editor.cursorBlinking": "expand",
+	"editor.cursorStyle": "line",
 	"editor.emptySelectionClipboard": false,
 	"editor.fontFamily": "Iosevka, Consolas, 'Courier New', monospace",
 	"editor.fontLigatures": true,
